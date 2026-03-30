@@ -163,29 +163,11 @@ export const pet = {
     },
 
     getFromType: (type: petType): pet[] => {
-        //return data.filter(item => {
-        //     if (item.type === type) {
-        //         return true;
-        //     } else {
-        //         return false;
-        //     }
-        // });
-        // return (item.type === type);
         return data.filter(item => item.type === type);
     },
 
     getFromName: (name: string): pet[] => {
-        // primeira forma
-        // return data.filter(item => {
-        //     if (item.name.indexOf(name) > -1) {
-        //         return true
-        //     } else {
-        //         return false
-        //     }
-            // segunda forma
-            // return (item.name.indexOf(name) > -1);
-        // })
         return data.filter(item => 
-            item.name.toLocaleLowerCase().indexOf(name.toLocaleLowerCase()) > -1);
+            item.name.toLowerCase().indexOf(name.toLocaleLowerCase()) > -1);
     }
 }
